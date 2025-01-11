@@ -31,9 +31,10 @@ export default function Producto() {
           <p className="font-semibold text-lg">$1</p>
         </div>
         <Slider
+          isDisabled
           className="max-w-md text-primary font-semibold"
+          defaultValue={60}
           getValue={(porcentaje) => `${porcentaje}%`}
-          //   formatOptions={{ style: "percent" }}
           label="Tickets Vendidos"
           size="md"
           maxValue={100}
