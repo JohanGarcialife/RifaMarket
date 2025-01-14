@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import useWindowSize from "@/hooks/useWindowSize";
-import Frame560 from "@/public/Frame560.png";
-import { Image, Skeleton } from "@nextui-org/react";
 import MenuVerticalCategorias from "./MenuVerticalCategorias";
+import SliderBanners from "./Sliders/SliderBanners";
 
 export default function HeroSection() {
   const { width } = useWindowSize();
@@ -20,14 +19,7 @@ export default function HeroSection() {
         <MenuVerticalCategorias />
       </div>
       <div className="w-3/4 ">
-        {/* <Skeleton className="rounded-lg"> */}
-        <Image
-          alt="NextUI hero Image with delay"
-          height={350}
-          src="https://nextui.org/images/hero-card-complete.jpeg"
-          width={900}
-        />
-        {/* </Skeleton> */}
+        <SliderBanners />
       </div>
     </div>
   );

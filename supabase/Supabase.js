@@ -8,18 +8,17 @@ const supabase = createClient(
 export async function getCategoriasApi() {
   const data = await supabase.from("categorias").select("*");
   const response = data.data;
-
   return response;
 }
 
-export async function getWebsitesApi() {
-  const data = await supabase.from("websites").select("*");
+export async function getProductosApi() {
+  const data = await supabase.from("productos").select("*");
   const response = data.data;
   return response;
 }
 
-export async function getAppsApi() {
-  const data = await supabase.from("apps").select("*");
+export async function getBannersApi() {
+  const data = await supabase.from("banners").select("*");
   const response = data.data;
   return response;
 }

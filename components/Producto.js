@@ -1,9 +1,23 @@
 import React from "react";
-import { Image, Slider } from "@nextui-org/react";
+import { Image } from "@nextui-org/react";
 import { FaRegHeart } from "react-icons/fa";
 import { IoTicketOutline } from "react-icons/io5";
 
-export default function Producto() {
+export default function Producto(props) {
+  const { producto } = props;
+  const {
+    name,
+    description,
+    totalTickets,
+    image,
+    categoria,
+    ticketPrice,
+    ticketsVendidos,
+  } = producto;
+  const progress = (ticketsVendidos / totalTickets) * 100;
+  console.log(progress);
+  console.log(producto);
+
   return (
     <div className="w-fit space-y-3 cursor-pointer">
       <div className="relative w-fit h-fit">
@@ -20,27 +34,24 @@ export default function Producto() {
           alt="NextUI hero Image with delay"
           height={250}
           width={250}
-          src="https://nextui.org/images/hero-card-complete.jpeg"
+          src={image}
           className=" z-0"
         />
       </div>
       <div className=" space-y-3">
-        <p className="text-title text-xl font-semibold">Nombre del Producto</p>
-        <div className="flex items-center space-x-3 text-primary ">
-          <IoTicketOutline />
-          <p className="font-semibold text-lg">$1</p>
+        <p className="text-title text-xl font-semibold">{name}</p>
+        <div className="flex items-center space-x-2 text-primary ">
+          <IoTicketOutline className="font-semibold text-lg" />
+          <p className="font-semibold text-lg">${ticketPrice}</p>
         </div>
-        <Slider
-          isDisabled
-          className="max-w-md text-primary font-semibold"
-          defaultValue={60}
-          getValue={(porcentaje) => `${porcentaje}%`}
-          label="Tickets Vendidos"
-          size="md"
-          maxValue={100}
-          minValue={0}
-          step={1}
-        />
+        <div className="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+          <div
+            className="bg-primary text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full"
+            style={{ width: `${progress}%` }}
+          >
+            <p className="font-semibold text-white">{progress}% </p>
+          </div>
+        </div>
       </div>
     </div>
   );

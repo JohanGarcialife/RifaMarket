@@ -6,9 +6,9 @@ export default function Encabezado(props) {
     <div className="space-y-5">
       <div className="flex items-center space-x-2">
         <div className="w-5 h-10 bg-primary rounded-lg" />
-        <p className="text-primary font-semibold">{title}</p>
+        <h2 className="text-primary font-semibold">{subtitle}</h2>
       </div>
-      <p className="text-title text-4xl font-semibold">{subtitle}</p>
+      <h3 className="text-title text-4xl font-semibold">{title}</h3>
     </div>
   );
 }

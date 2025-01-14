@@ -7,6 +7,7 @@ const roboto = Roboto({
   variable: "--font-roboto",
   weight: "400",
 });
+
 export default function App({ Component, pageProps }) {
   return (
     <NextUIProvider>
