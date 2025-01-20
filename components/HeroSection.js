@@ -1,24 +1,18 @@
-import React, { useEffect, useState } from "react";
-import useWindowSize from "@/hooks/useWindowSize";
+import React from "react";
+
 import MenuVerticalCategorias from "./MenuVerticalCategorias";
 import SliderBanners from "./Sliders/SliderBanners";
 
 export default function HeroSection() {
-  const { width } = useWindowSize();
-
-  // useEffect(() => {
-  //   (async () => {
-  //     const response = await getTechnologiesApi();
-  //     setTechArray(response);
-  //   })();
-  // }, []);
-
   return (
-    <div className="px-20 py-10  flex items-center  space-x-5" id="home">
-      <div className="w-1/4  flex flex-col ">
+    <div
+      className="px-12 md:px-48 lg:px-64 py-10 md:py-0 md:flex items-center space-y-5 md:space-y-0 md:space-x-5"
+      id="home"
+    >
+      <div className="md:w-1/4 ">
         <MenuVerticalCategorias />
       </div>
-      <div className="w-3/4 ">
+      <div className="md:w-3/4 ">
         <SliderBanners />
       </div>
     </div>

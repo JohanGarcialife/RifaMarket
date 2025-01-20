@@ -23,8 +23,8 @@ export async function getBannersApi() {
   return response;
 }
 
-export async function getTestimonialsApi() {
-  const data = await supabase.from("testimonials").select("*");
+export async function getFaqApi() {
+  const data = await supabase.from("faq").select("*");
   const response = data.data;
   return response;
 }

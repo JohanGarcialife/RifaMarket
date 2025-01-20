@@ -1,30 +1,21 @@
 import React, { useEffect, useState } from "react";
 import Encabezado from "../Encabezado";
+import Producto from "../Producto";
 import Slider from "react-slick";
-import Categoria from "../Categoria";
-import { getCategoriasApi } from "@/supabase/Supabase";
+import { Button } from "@nextui-org/react";
 
-export default function SliderCategorias(props) {
-  const { title, subtitle } = props;
-  const [categorias, setCategorias] = useState([]);
-
-  useEffect(() => {
-    (async () => {
-      const response = await getCategoriasApi();
-      setCategorias(response);
-    })();
-  }, []);
+export default function SliderMultiple(props) {
+  const { title, subtitle, productos } = props;
 
   const settings = {
-    dots: false,
+    className: "center",
+    centerMode: true,
     infinite: true,
-    autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 1500,
+    centerPadding: "60px",
     slidesToShow: 5,
-    slidesToScroll: 1,
-    pauseOnHover: true,
-    cssEase: "linear",
+    speed: 500,
+    rows: 2,
+    slidesPerRow: 1,
     responsive: [
       {
         breakpoint: 1024,
@@ -52,15 +43,21 @@ export default function SliderCategorias(props) {
       },
     ],
   };
-
   return (
-    <div className="px-12 md:px-48 lg:px-64 space-y-10 py-5">
+    <div className="px-12 md:px-48 lg:px-64 space-y-10">
       <Encabezado title={title} subtitle={subtitle} />
-      <Slider {...settings}>
-        {categorias?.map((categoria) => (
-          <Categoria categoria={categoria} />
-        ))}
-      </Slider>
+      <div className="slider-container ">
+        <Slider {...settings}>
+          {productos?.map((producto) => (
+            <Producto producto={producto} />
+          ))}
+        </Slider>
+      </div>
+      <div className="flex w-full justify-center">
+        <Button className="bg-primary" variant="solid">
+          <p className="text-white">Ver todos los productos</p>
+        </Button>
+      </div>
     </div>
   );
 }

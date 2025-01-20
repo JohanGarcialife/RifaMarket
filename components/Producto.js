@@ -15,11 +15,9 @@ export default function Producto(props) {
     ticketsVendidos,
   } = producto;
   const progress = (ticketsVendidos / totalTickets) * 100;
-  console.log(progress);
-  console.log(producto);
 
   return (
-    <div className="w-fit space-y-3 cursor-pointer">
+    <div className="w-fit space-y-3 cursor-pointer my-10">
       <div className="relative w-fit h-fit">
         <div className="bg-primary rounded-lg py-1 px-2 absolute z-10 top-3 left-3">
           <p className="text-white text-sm">HOY</p>
@@ -39,7 +37,7 @@ export default function Producto(props) {
         />
       </div>
       <div className=" space-y-3">
-        <p className="text-title text-xl font-semibold">{name}</p>
+        <p className="text-title text-base md:text-xl font-semibold">{name}</p>
         <div className="flex items-center space-x-2 text-primary ">
           <IoTicketOutline className="font-semibold text-lg" />
           <p className="font-semibold text-lg">${ticketPrice}</p>
@@ -49,7 +47,7 @@ export default function Producto(props) {
             className="bg-primary text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full"
             style={{ width: `${progress}%` }}
           >
-            <p className="font-semibold text-white">{progress}% </p>
+            <p className="font-semibold text-white">{Math.trunc(progress)}% </p>
           </div>
         </div>
       </div>
