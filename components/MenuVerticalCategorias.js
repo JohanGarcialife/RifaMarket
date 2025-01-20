@@ -20,7 +20,7 @@ export default function MenuVerticalCategorias() {
   }, []);
 
   return (
-    <div className="flex justify-end w-full">
+    <div className="flex md:justify-end w-full">
       <div className=" flex flex-col space-y-1 md:space-y-3 md:border-r md:pr-5 md:border-gris/50 items-start ">
         {categorias?.map((categoria) => (
           <>

@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Encabezado from "../Encabezado";
 import Producto from "../Producto";
 import Slider from "react-slick";
 import { Button } from "@nextui-org/react";
+import Link from "next/link";
 
 export default function SliderProducts(props) {
   const { title, subtitle, productos } = props;
@@ -10,7 +11,7 @@ export default function SliderProducts(props) {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 2000,
+    speed: 500,
     autoplay: true,
     autoplaySpeed: 2000,
     slidesToShow: 5,
@@ -50,7 +51,11 @@ export default function SliderProducts(props) {
       <Encabezado title={title} subtitle={subtitle} />
       <Slider {...settings}>
         {productos?.map((producto) => (
-          <Producto producto={producto} />
+          <Link key={producto.id} href={`/${producto.id}`}>
+            <div className="p-5">
+              <Producto producto={producto} />
+            </div>
+          </Link>
         ))}
       </Slider>
       <div className="flex w-full justify-center">

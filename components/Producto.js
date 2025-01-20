@@ -29,7 +29,7 @@ export default function Producto(props) {
         </div>
         <Image
           isZoomed
-          alt="NextUI hero Image with delay"
+          alt="Producto"
           height={250}
           width={250}
           src={image}

@@ -16,6 +16,11 @@ export async function getProductosApi() {
   const response = data.data;
   return response;
 }
+export async function getProductoByIdApi(id) {
+  const data = await supabase.from("productos").select("*").eq("id", id);
+  const response = data.data;
+  return response;
+}
 
 export async function getBannersApi() {
   const data = await supabase.from("banners").select("*");

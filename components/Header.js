@@ -30,11 +30,13 @@ export default function Header() {
     <Navbar isBordered>
       <NavbarContent justify="start">
         <NavbarBrand className="mr-4">
-          <Image src={Logo} alt="Logo" width={100} height={100} />
+          <Link color="title" href="/">
+            <Image src={Logo} alt="Logo" width={100} height={100} />
+          </Link>
         </NavbarBrand>
         <NavbarContent className="hidden sm:flex gap-3">
           <NavbarItem>
-            <Link color="title" href="#">
+            <Link color="title" href="/">
               <p className="text-title font-semibold">Home</p>
             </Link>
           </NavbarItem>

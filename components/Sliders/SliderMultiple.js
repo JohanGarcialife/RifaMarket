@@ -49,7 +49,9 @@ export default function SliderMultiple(props) {
       <div className="slider-container ">
         <Slider {...settings}>
           {productos?.map((producto) => (
-            <Producto producto={producto} />
+            <div className="p-5">
+              <Producto producto={producto} />
+            </div>
           ))}
         </Slider>
       </div>

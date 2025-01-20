@@ -6,7 +6,7 @@ import useWindowSize from "@/hooks/useWindowSize";
 
 export default function SliderBanners() {
   const [banners, setBanners] = useState([]);
-  const { width } = useWindowSize();
+  const { width, height } = useWindowSize();
 
   useEffect(() => {
     (async () => {
@@ -31,12 +31,27 @@ export default function SliderBanners() {
   return (
     <Slider {...settings}>
       {banners?.map((banner) => (
-        <Image
-          alt="Banner"
-          height={width / 2}
-          src={banner.image}
-          width={width}
-        />
+        <>
+          {width > 600 ? (
+            <div className="p-5">
+              <Image
+                alt="Banner"
+                height={height / 2}
+                src={banner.image}
+                width={width}
+              />
+            </div>
+          ) : (
+            <div className="p-1">
+              <Image
+                alt="Banner"
+                height={width / 2}
+                src={banner.image}
+                width={width}
+              />
+            </div>
+          )}
+        </>
       ))}
     </Slider>
   );
