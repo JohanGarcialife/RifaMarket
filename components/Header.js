@@ -11,7 +11,7 @@ import {
   Dropdown,
   DropdownMenu,
   Avatar,
-} from "@nextui-org/react";
+} from "@heroui/react";
 import Logo from "../public/logo.svg";
 import Image from "next/image";
 
@@ -83,22 +83,21 @@ export default function Header() {
               <p className="text-title font-semibold">Hola! Usuario</p>
               <p className="text-title font-semibold">zoey@example.com</p>
             </DropdownItem>
-            <DropdownItem key="settings">
-              <p className="text-title font-semibold">Mi cuenta</p>
+            <DropdownItem key="cuenta">
+              <Link color="title" href="Cuenta">
+                <p className="text-title font-semibold">Mi cuenta</p>
+              </Link>
             </DropdownItem>
-            <DropdownItem
-              key="team_settings"
-              className="text-title font-semibold"
-            >
+            <DropdownItem key="tickets" className="text-title font-semibold">
               <p className="text-title font-semibold">Mis tickets</p>
             </DropdownItem>
             <DropdownItem
-              key="configurations"
+              key="configuracion"
               className="text-title font-semibold"
             >
               <p className="text-title font-semibold">Configuración</p>
             </DropdownItem>
-            <DropdownItem key="help_and_feedback">
+            <DropdownItem key="ayuda">
               <p className="text-title font-semibold">Ayuda & Feedback</p>
             </DropdownItem>
             <DropdownItem

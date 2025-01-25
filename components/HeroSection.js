@@ -1,5 +1,4 @@
 import React from "react";
-
 import MenuVerticalCategorias from "./MenuVerticalCategorias";
 import SliderBanners from "./Sliders/SliderBanners";
 

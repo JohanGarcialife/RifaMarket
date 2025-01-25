@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Accordion, AccordionItem } from "@nextui-org/react";
+import { Accordion, AccordionItem } from "@heroui/react";
 import Encabezado from "./Encabezado";
 import { getFaqApi } from "@/supabase/Supabase";
 

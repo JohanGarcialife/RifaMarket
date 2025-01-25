@@ -1,5 +1,5 @@
 import React from "react";
-import { Image } from "@nextui-org/react";
+import { Image } from "@heroui/react";
 import { FaRegHeart } from "react-icons/fa";
 import { IoTicketOutline } from "react-icons/io5";
 

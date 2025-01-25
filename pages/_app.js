@@ -1,5 +1,5 @@
 import "@/styles/globals.css";
-import { NextUIProvider } from "@nextui-org/react";
+import { HeroUIProvider } from "@heroui/react";
 import { Roboto } from "next/font/google";
 
 const roboto = Roboto({
@@ -10,10 +10,10 @@ const roboto = Roboto({
 
 export default function App({ Component, pageProps }) {
   return (
-    <NextUIProvider>
+    <HeroUIProvider>
       <main className={`${roboto.variable} font-sans`}>
         <Component {...pageProps} />
       </main>
-    </NextUIProvider>
+    </HeroUIProvider>
   );
 }

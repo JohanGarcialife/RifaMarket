@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Encabezado from "../Encabezado";
 import Producto from "../Producto";
 import Slider from "react-slick";
-import { Button } from "@nextui-org/react";
+import { Button } from "@heroui/react";
 
 export default function SliderMultiple(props) {
   const { title, subtitle, productos } = props;

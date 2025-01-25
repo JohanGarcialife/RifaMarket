@@ -2,7 +2,7 @@ import React from "react";
 import Encabezado from "../Encabezado";
 import Producto from "../Producto";
 import Slider from "react-slick";
-import { Button } from "@nextui-org/react";
+import { Button } from "@heroui/react";
 import Link from "next/link";
 
 export default function SliderProducts(props) {
@@ -52,7 +52,7 @@ export default function SliderProducts(props) {
       <Slider {...settings}>
         {productos?.map((producto) => (
           <Link key={producto.id} href={`/${producto.id}`}>
-            <div className="p-5">
+            <div className="m-2">
               <Producto producto={producto} />
             </div>
           </Link>

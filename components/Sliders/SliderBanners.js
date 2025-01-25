@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getBannersApi } from "@/supabase/Supabase";
-import { Image } from "@nextui-org/react";
+import { Image } from "@heroui/react";
 import Slider from "react-slick";
 import useWindowSize from "@/hooks/useWindowSize";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Image, Input } from "@nextui-org/react";
+import { Button, Image, Input } from "@heroui/react";
 import { LuSendHorizontal } from "react-icons/lu";
 import { BsWhatsapp } from "react-icons/bs";
 

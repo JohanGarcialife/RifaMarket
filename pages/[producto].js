@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Layout from "@/layout/Layout";
 import { useRouter } from "next/router";
 import { getProductoByIdApi } from "@/supabase/Supabase";
-import { Button, Image } from "@nextui-org/react";
+import { Button, Image } from "@heroui/react";
 
 export default function Producto() {
   const data = useRouter();
